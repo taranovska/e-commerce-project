@@ -12,43 +12,46 @@ import {
   Error,
   Checkout,
   PrivateRoute,
+  AuthWrapper,
 } from "./pages/index";
 
 function App() {
   return (
-    <Router>
-      <Navbar></Navbar>
-      <Sidebar></Sidebar>
-      <Switch>
-        <Route exact path="/">
-          <Home></Home>
-        </Route>
-        <Route exact path="/about">
-          <About></About>
-        </Route>
-        <Route exact path="/cart">
-          <Cart></Cart>
-        </Route>
-        <Route exact path="/error">
-          <Error></Error>
-        </Route>
-        <Route exact path="/checkout">
-          <Checkout></Checkout>
-        </Route>
-        <Route
-          exact
-          path="/products/:id"
-          children={<SingleProduct></SingleProduct>}
-        ></Route>
-        <Route exact path="/products">
-          <Products></Products>
-        </Route>
-        <Route exact path="*">
-          <Error></Error>
-        </Route>
-      </Switch>
-      <Footer></Footer>
-    </Router>
+    <AuthWrapper>
+      <Router>
+        <Navbar></Navbar>
+        <Sidebar></Sidebar>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route exact path="/about">
+            <About></About>
+          </Route>
+          <Route exact path="/cart">
+            <Cart></Cart>
+          </Route>
+          <Route exact path="/error">
+            <Error></Error>
+          </Route>
+          <PrivateRoute exact path="/checkout">
+            <Checkout></Checkout>
+          </PrivateRoute>
+          <Route
+            exact
+            path="/products/:id"
+            children={<SingleProduct></SingleProduct>}
+          ></Route>
+          <Route exact path="/products">
+            <Products></Products>
+          </Route>
+          <Route exact path="*">
+            <Error></Error>
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </Router>
+    </AuthWrapper>
   );
 }
 

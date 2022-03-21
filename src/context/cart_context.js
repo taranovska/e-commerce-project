@@ -36,20 +36,21 @@ export const CartProvider = ({ children }) => {
 
   // remove item
   const removeItem = (id) => {
-    //dispatch({ type: ADD_TO_CART, payload: { id, color, amount, product } });
+    dispatch({ type: REMOVE_CART_ITEM, payload: id });
   };
 
   // toggle Amount
   const toggleAmount = (id, value) => {
-    //dispatch({ type: ADD_TO_CART, payload: { id, color, amount, product } });
+    dispatch({ type: TOGGLE_CART_ITEM_AMOUNT, payload: { id, value } });
   };
 
   // remove item
   const clearCart = () => {
-    //dispatch({ type: ADD_TO_CART, payload: { id, color, amount, product } });
+    dispatch({ type: CLEAR_CART });
   };
 
   useEffect(() => {
+    dispatch({ type: COUNT_CART_TOTALS });
     localStorage.setItem("cart", JSON.stringify(state.cart));
   }, [state.cart]);
 
