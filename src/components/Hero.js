@@ -12,7 +12,7 @@ const Hero = () => {
           design your <br />
           comfort zone
         </h1>
-        <p>loremfffffffffffffffffffffffffffffffffffff</p>
+        <p></p>
         <Link to="/products" className="btn hero-btn">
           shop now
         </Link>
