@@ -11,7 +11,6 @@ const Services = () => {
             custom furniture <br />
             built only for you
           </h3>
-          <p>vfvbfeberrereberberbreberberbrebre</p>
         </article>
         <div className="services-center">
           {services.map((service) => {

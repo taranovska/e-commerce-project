@@ -14,9 +14,6 @@ const AboutPage = () => {
             <h2>our story</h2>
             <div className="underline"></div>
           </div>
-          <p>
-            lorem;oiulyktrjhegwfqdQAFSDGBFNGMHKTMJNHGFWDQSdfgnhwefqdsfgbgdrwedsfvgfdfsvd
-          </p>
         </article>
       </Wrapper>
     </main>

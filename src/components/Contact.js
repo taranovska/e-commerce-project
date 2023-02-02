@@ -8,7 +8,6 @@ const Contact = () => {
         <h3>Join our newsletter and get 20% off</h3>
       </div>
       <div className="content">
-        <p>bknefberoberbreiberonbreberbn</p>
         <form className="contact-form">
           <input
             type="email"
